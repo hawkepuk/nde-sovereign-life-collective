@@ -1,0 +1,316 @@
+/* ============================================================
+   Medicine Wheel Primary Colors
+   ============================================================ */
+:root {
+    --mw-white: #FFFFFF;
+    --mw-yellow: #F2C200;
+    --mw-green: #00A86B;
+    --mw-black: #000000;
+
+    --mw-gold: #d4af37;
+    --mw-gold-dark: #b8860b;
+
+    --mw-light-bg: #f4f7fb;
+    --mw-text: #1f2937;
+}
+
+/* ============================================================
+   Global Reset
+   ============================================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--mw-light-bg);
+    color: var(--mw-text);
+}
+
+/* ============================================================
+   Brand Banner
+   ============================================================ */
+.brand-banner {
+    padding: 1.5rem 1rem;
+    background: transparent;
+    text-align: center;
+}
+
+.brand-logo-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.brand-logo {
+    height: 80px;
+    width: auto;
+}
+
+.brand-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--mw-black);
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+.main-nav {
+    background: var(--mw-black);
+    padding: 0.75rem 1rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: var(--mw-white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: var(--mw-yellow);
+}
+
+/* ============================================================
+   UNIFIED HERO (ALL pages except Programs)
+   ============================================================ */
+.hero,
+.about-hero,
+.mission-hero,
+.contact-hero,
+.donate-hero,
+.rv-hero {
+    background: var(--mw-green);
+    color: var(--mw-white);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.hero h2,
+.about-hero h1,
+.mission-hero h1,
+.contact-hero h1,
+.donate-hero h1,
+.rv-hero h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.hero p,
+.about-hero p,
+.mission-hero p,
+.contact-hero p,
+.donate-hero p,
+.rv-hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* ============================================================
+   Home Intro (Yellow)
+   ============================================================ */
+.intro {
+    background: var(--mw-yellow);
+    color: var(--mw-black);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.intro h3 {
+    margin-top: 0;
+    font-size: 1.75rem;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   Mission Content
+   ============================================================ */
+.mission-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.mission-content h2 {
+    margin-top: 2rem;
+    color: var(--mw-black);
+    font-size: 1.6rem;
+}
+
+.mission-content p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* ============================================================
+   PROGRAMS PAGE (UNTOUCHED)
+   ============================================================ */
+.programs-hero {
+    background: linear-gradient(135deg,
+        var(--mw-white),
+        var(--mw-yellow),
+        var(--mw-green),
+        var(--mw-black)
+    );
+    color: var(--mw-white);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.programs-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.program-block h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.program-block p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Taekwon-Do */
+.program-block.taekwondo {
+    background: linear-gradient(135deg, #b30000, #0033cc);
+    color: var(--mw-white);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 10px solid var(--mw-black);
+    border-radius: 8px;
+}
+
+.program-block.taekwondo h2 {
+    color: var(--mw-white);
+}
+
+/* Wellness */
+.program-block.wellness {
+    background: #fff8dc;
+    border-left: 10px solid var(--mw-gold);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.program-block.wellness h2 {
+    color: var(--mw-gold-dark);
+}
+
+/* Land-Based */
+.program-block.land {
+    background: linear-gradient(135deg,
+        var(--mw-white),
+        var(--mw-yellow),
+        var(--mw-green),
+        var(--mw-black)
+    );
+    color: var(--mw-white);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 10px solid var(--mw-black);
+    border-radius: 8px;
+}
+
+.program-block.land h2 {
+    color: var(--mw-yellow);
+}
+
+/* ============================================================
+   About Page Content
+   ============================================================ */
+.about-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.about-content h2 {
+    margin-top: 2rem;
+    color: var(--mw-black);
+    font-size: 1.6rem;
+}
+
+.about-content p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.about-values {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.about-values li {
+    background: var(--mw-yellow);
+    color: var(--mw-black);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+    background: var(--mw-black);
+    color: var(--mw-white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+/* Unified Hero Style (ALL pages except Programs) */
+.hero {
+    background: var(--mw-green);
+    color: var(--mw-white);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.hero {
+    background: var(--mw-green);
+    color: var(--mw-white);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
