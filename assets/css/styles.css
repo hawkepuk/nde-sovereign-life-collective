@@ -1,39 +1,89 @@
 /* ============================================================
-   Medicine Wheel Primary Colors
-   ============================================================ */
+   NDE SOVEREIGN LIFE COLLECTIVE
+   Business Card Inspired Theme
+============================================================ */
+
 :root {
-    --mw-white: #FFFFFF;
-    --mw-yellow: #F2C200;
-    --mw-green: #00A86B;
-    --mw-black: #000000;
+    --nde-black: #050505;
+    --nde-black-soft: #101010;
 
-    --mw-gold: #d4af37;
-    --mw-gold-dark: #b8860b;
+    --nde-white: #f5f5f5;
+    --nde-silver: #d9d9d9;
 
-    --mw-light-bg: #f4f7fb;
-    --mw-text: #1f2937;
+    --nde-green-dark: #004d2c;
+    --nde-green: #008c4a;
+    --nde-green-bright: #00c96b;
+
+    --nde-gold-dark: #9a7410;
+    --nde-gold: #d4af37;
+    --nde-gold-bright: #f5d142;
+
+    --nde-card-bg: #111111;
+
+    --gold-gradient:
+        linear-gradient(
+            135deg,
+            #9a7410,
+            #d4af37,
+            #f5d142,
+            #d4af37
+        );
+
+    --green-gradient:
+        linear-gradient(
+            135deg,
+            #00361f,
+            #00643a,
+            #00a651
+        );
 }
 
 /* ============================================================
-   Global Reset
-   ============================================================ */
+   GLOBAL RESET
+============================================================ */
+
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--mw-light-bg);
-    color: var(--mw-text);
+    font-family: Georgia, serif;
+    background: var(--nde-black);
+    color: var(--nde-white);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--nde-green-bright);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--nde-gold-bright);
 }
 
 /* ============================================================
-   Brand Banner
-   ============================================================ */
+   BRAND BANNER
+============================================================ */
+
 .brand-banner {
-    padding: 1.5rem 1rem;
-    background: transparent;
+    padding: 2rem 1rem;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #000000,
+            #0b0b0b
+        );
+
+    border-bottom: 3px solid var(--nde-gold);
+
     text-align: center;
 }
 
@@ -42,60 +92,80 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .brand-logo {
-    height: 80px;
+    height: 90px;
     width: auto;
 }
 
 .brand-text {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: var(--mw-black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--nde-white);
+
+    text-shadow:
+        0 0 10px rgba(212,175,55,.4);
 }
 
 /* ============================================================
-   Navigation
-   ============================================================ */
+   NAVIGATION
+============================================================ */
+
 .main-nav {
-    background: var(--mw-black);
-    padding: 0.75rem 1rem;
+    background: #000;
+    border-bottom: 2px solid var(--nde-gold);
+    padding: 1rem;
 }
 
 .main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
 .main-nav a {
-    color: var(--mw-white);
-    text-decoration: none;
-    font-size: 1.1rem;
+    color: var(--nde-white);
+    text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .main-nav a:hover {
-    color: var(--mw-yellow);
+    color: var(--nde-gold-bright);
 }
 
 /* ============================================================
-   UNIFIED HERO (ALL pages except Programs)
-   ============================================================ */
+   HERO SECTIONS
+============================================================ */
+
 .hero,
 .about-hero,
 .mission-hero,
 .contact-hero,
 .donate-hero,
 .rv-hero {
-    background: var(--mw-green);
-    color: var(--mw-white);
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.88),
+            rgba(0,55,28,.75)
+        );
+
     text-align: center;
-    padding: 3rem 1.5rem;
+
+    padding: 5rem 2rem;
+
+    border-top: 1px solid var(--nde-green);
+    border-bottom: 2px solid var(--nde-gold);
 }
 
 .hero h2,
@@ -104,8 +174,16 @@ body {
 .contact-hero h1,
 .donate-hero h1,
 .rv-hero h1 {
+
     margin: 0;
-    font-size: 2.2rem;
+
+    font-size: 3rem;
+
+    text-transform: uppercase;
+
+    color: var(--nde-white);
+
+    letter-spacing: 3px;
 }
 
 .hero p,
@@ -114,203 +192,278 @@ body {
 .contact-hero p,
 .donate-hero p,
 .rv-hero p {
+
     margin-top: 1rem;
+
+    color: var(--nde-silver);
+
     font-size: 1.2rem;
 }
 
 /* ============================================================
-   Home Intro (Yellow)
-   ============================================================ */
+   INTRO SECTION
+============================================================ */
+
 .intro {
-    background: var(--mw-yellow);
-    color: var(--mw-black);
+
+    max-width: 1200px;
+
+    margin: 3rem auto;
+
+    padding: 3rem;
+
+    background: var(--nde-card-bg);
+
+    border: 2px solid var(--nde-gold);
+
+    border-radius: 20px;
+
     text-align: center;
-    padding: 3rem 1.5rem;
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,.15),
+        0 0 25px rgba(0,166,81,.10);
 }
 
 .intro h3 {
     margin-top: 0;
-    font-size: 1.75rem;
+
+    color: var(--nde-gold-bright);
+
+    font-size: 2rem;
 }
 
 .intro p {
-    max-width: 700px;
-    margin: 1rem auto 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* ============================================================
-   Mission Content
-   ============================================================ */
-.mission-content {
     max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.mission-content h2 {
-    margin-top: 2rem;
-    color: var(--mw-black);
-    font-size: 1.6rem;
-}
-
-.mission-content p {
-    line-height: 1.6;
-    font-size: 1.1rem;
+    margin: auto;
 }
 
 /* ============================================================
-   PROGRAMS PAGE (UNTOUCHED)
-   ============================================================ */
-.programs-hero {
-    background: linear-gradient(135deg,
-        var(--mw-white),
-        var(--mw-yellow),
-        var(--mw-green),
-        var(--mw-black)
-    );
-    color: var(--mw-white);
-    text-align: center;
-    padding: 3rem 1.5rem;
-}
+   CONTENT SECTIONS
+============================================================ */
 
+.about-content,
+.mission-content,
 .programs-content {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+
+    max-width: 1200px;
+
+    margin: 3rem auto;
+
+    padding: 2rem;
+
+    background: var(--nde-card-bg);
+
+    border: 2px solid var(--nde-gold);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,.15),
+        0 0 25px rgba(0,166,81,.10);
 }
 
+.about-content h2,
+.mission-content h2,
 .program-block h2 {
-    margin-top: 0;
-    font-size: 1.6rem;
+
+    color: var(--nde-gold-bright);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
 }
 
+.about-content p,
+.mission-content p,
 .program-block p {
-    line-height: 1.6;
-    font-size: 1.1rem;
-}
 
-/* Taekwon-Do */
-.program-block.taekwondo {
-    background: linear-gradient(135deg, #b30000, #0033cc);
-    color: var(--mw-white);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 10px solid var(--mw-black);
-    border-radius: 8px;
-}
-
-.program-block.taekwondo h2 {
-    color: var(--mw-white);
-}
-
-/* Wellness */
-.program-block.wellness {
-    background: #fff8dc;
-    border-left: 10px solid var(--mw-gold);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-}
-
-.program-block.wellness h2 {
-    color: var(--mw-gold-dark);
-}
-
-/* Land-Based */
-.program-block.land {
-    background: linear-gradient(135deg,
-        var(--mw-white),
-        var(--mw-yellow),
-        var(--mw-green),
-        var(--mw-black)
-    );
-    color: var(--mw-white);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 10px solid var(--mw-black);
-    border-radius: 8px;
-}
-
-.program-block.land h2 {
-    color: var(--mw-black);
+    color: var(--nde-white);
 }
 
 /* ============================================================
-   About Page Content
-   ============================================================ */
-.about-content {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.about-content h2 {
-    margin-top: 2rem;
-    color: var(--mw-black);
-    font-size: 1.6rem;
-}
-
-.about-content p {
-    line-height: 1.6;
-    font-size: 1.1rem;
-}
+   ABOUT VALUES
+============================================================ */
 
 .about-values {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
 }
 
 .about-values li {
-    background: var(--mw-yellow);
-    color: var(--mw-black);
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 6px;
+
+    background: #181818;
+
+    border-left: 5px solid var(--nde-gold);
+
+    color: var(--nde-white);
+
+    padding: 1rem;
+
+    margin-bottom: 1rem;
+
+    border-radius: 10px;
 }
 
 /* ============================================================
-   Footer
-   ============================================================ */
+   PROGRAM BLOCKS
+============================================================ */
+
+.program-block {
+
+    padding: 2rem;
+
+    border-radius: 15px;
+
+    margin-bottom: 2rem;
+
+    border: 2px solid var(--nde-gold);
+
+    background: #111;
+
+    box-shadow:
+        0 0 12px rgba(212,175,55,.12);
+}
+
+.program-block.taekwondo {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7a0000,
+            #0b2675
+        );
+}
+
+.program-block.wellness {
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #00361f
+        );
+}
+
+.program-block.land {
+
+    background:
+        linear-gradient(
+            135deg,
+            #141414,
+            #00643a
+        );
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+
+.button,
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: var(--gold-gradient);
+
+    color: #000;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.button:hover,
+.btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(245,209,66,.5);
+}
+
+/* ============================================================
+   BUSINESS CARD STYLE DIVIDER
+============================================================ */
+
+.section-divider {
+
+    width: 220px;
+
+    height: 4px;
+
+    margin: 2rem auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--nde-green),
+            var(--nde-gold),
+            var(--nde-green),
+            transparent
+        );
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
 .footer {
-    background: var(--mw-black);
-    color: var(--mw-white);
+
+    background: #000;
+
+    color: var(--nde-white);
+
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-/* Unified Hero Style (ALL pages except Programs) */
-.hero {
-    background: var(--mw-green);
-    color: var(--mw-white);
-    text-align: center;
-    padding: 3rem 1.5rem;
+
+    padding: 2rem;
+
+    border-top: 3px solid var(--nde-gold);
 }
 
-.hero h2 {
-    margin: 0;
-    font-size: 2.2rem;
+.footer a {
+    color: var(--nde-green-bright);
 }
 
-.hero p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-}
-.hero {
-    background: var(--mw-green);
-    color: var(--mw-white);
-    text-align: center;
-    padding: 3rem 1.5rem;
+.footer a:hover {
+    color: var(--nde-gold-bright);
 }
 
-.hero h2 {
-    margin: 0;
-    font-size: 2.2rem;
-}
+/* ============================================================
+   MOBILE
+============================================================ */
 
-.hero p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+@media (max-width: 768px) {
+
+    .brand-text {
+        font-size: 1.5rem;
+    }
+
+    .hero h2,
+    .about-hero h1,
+    .mission-hero h1,
+    .contact-hero h1,
+    .donate-hero h1,
+    .rv-hero h1 {
+        font-size: 2rem;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+    }
+
+    .intro,
+    .about-content,
+    .mission-content,
+    .programs-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
 }
