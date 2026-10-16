@@ -91,22 +91,21 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .brand-logo {
-    height: 90px;
+    height: 60px; /* adjust as desired */
     width: auto;
 }
 
 .brand-text {
     font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 700;
     color: var(--nde-white);
-
+    text-align: center;
+}
     text-shadow:
         0 0 10px rgba(212,175,55,.4);
 }
