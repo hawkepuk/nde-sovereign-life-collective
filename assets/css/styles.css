@@ -1,14 +1,20 @@
 
-/* =====================================
+/*============================================================
    NDE SOVEREIGN LIFE COLLECTIVE
-   CONCEPTS PAGE STYLES
-===================================== */
+   COMPLETE WEBSITE STYLESHEET
+   Original Theme + Responsive Concepts Image Viewer
+============================================================*/
 
 
-/* BRAND COLORS */
+/*============================================================
+   BRAND COLORS
+============================================================*/
 
 :root {
+
     --nde-black: #050505;
+    --nde-black-soft: #101010;
+
     --nde-white: #f5f5f5;
     --nde-silver: #d9d9d9;
 
@@ -21,14 +27,32 @@
     --nde-gold-bright: #f5d142;
 
     --nde-card-bg: #111111;
+
+    --gold-gradient: linear-gradient(
+        135deg,
+        #9a7410,
+        #d4af37,
+        #f5d142,
+        #d4af37
+    );
+
+    --green-gradient: linear-gradient(
+        135deg,
+        #00361f,
+        #00643a,
+        #00a651
+    );
+
 }
 
 
-/* GLOBAL STYLES */
+/*============================================================
+   GLOBAL STYLES
+============================================================*/
 
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -37,16 +61,43 @@ html {
 }
 
 body {
-    background: var(--nde-black);
-    color: var(--nde-white);
+
+    margin: 0;
+
     font-family: Georgia, serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #07150e 35%,
+            #0b2417 65%,
+            #050505 100%
+        );
+
+    background-attachment: fixed;
+
+    color: var(--nde-white);
+
     line-height: 1.7;
+
+    min-height: 100vh;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
+
     color: var(--nde-green-bright);
+
     text-decoration: none;
+
     transition: color 0.3s ease;
+
 }
 
 a:hover {
@@ -55,153 +106,432 @@ a:hover {
 
 a:focus-visible,
 button:focus-visible {
+
     outline: 3px solid var(--nde-gold-bright);
+
     outline-offset: 4px;
+
 }
 
 
-/* HEADER */
+/*============================================================
+   MAIN PAGE LAYOUT
+============================================================*/
+
+main {
+
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Shared centered content containers */
+
+.container,
+.content-container,
+.page-content {
+
+    width: calc(100% - 40px);
+
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/*============================================================
+   HEADER
+============================================================*/
 
 .brand-banner {
-    background: #000;
+
+    padding: 2rem 1rem;
+
+    text-align: center;
+
+    background: linear-gradient(
+        to bottom,
+        #000000,
+        #0b0b0b
+    );
+
     border-bottom: 3px solid var(--nde-gold);
-    padding: 25px 15px;
+
 }
 
 .brand-logo-text {
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
-    gap: 25px;
+    justify-content: center;
+
+    gap: 15px;
+
     flex-wrap: wrap;
-    text-align: center;
+
 }
 
 .brand-logo {
-    height: 85px;
+
+    height: 60px;
     width: auto;
+
     max-width: 100%;
+
     object-fit: contain;
+
 }
 
 .brand-text {
-    font-size: 2.8rem;
-    font-weight: bold;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
     color: var(--nde-white);
+
+    text-align: center;
 
     text-shadow:
         0 0 10px rgba(212,175,55,0.4);
+
 }
 
 
-/* NAVIGATION */
+/*============================================================
+   NAVIGATION
+============================================================*/
 
 .main-nav {
+
     background: #000;
+
     border-bottom: 2px solid var(--nde-gold);
+
+    padding: 1rem;
+
 }
 
 .main-nav ul {
+
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+
     display: flex;
+
+    flex-wrap: wrap;
+
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 18px;
+
+    gap: 2rem;
+
 }
 
 .main-nav a {
+
     color: var(--nde-white);
+
     font-weight: bold;
+
     text-transform: uppercase;
+
+    letter-spacing: 1px;
+
     font-size: 0.95rem;
+
 }
 
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
+
     color: var(--nde-gold-bright);
+
 }
 
 
-/* HERO */
+/*============================================================
+   HERO SECTIONS
+   SHARED ACROSS ALL MAIN PAGES
+============================================================*/
 
+.hero,
+.about-hero,
+.mission-hero,
+.contact-hero,
+.donate-hero,
+.rv-hero,
 .concepts-hero {
-    text-align: center;
-    padding: 65px 20px;
 
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.85),
-            rgba(0,77,44,0.65)
-        );
+    text-align: center;
+
+    padding: 5rem 2rem;
+
+    background: linear-gradient(
+        rgba(0,0,0,0.88),
+        rgba(0,55,28,0.75)
+    );
+
+    border-top: 1px solid var(--nde-green);
 
     border-bottom: 2px solid var(--nde-gold);
+
 }
 
+
+/* HERO HEADINGS */
+
+.hero h1,
+.hero h2,
+.about-hero h1,
+.mission-hero h1,
+.contact-hero h1,
+.donate-hero h1,
+.rv-hero h1,
 .concepts-hero h1 {
+
+    margin: 0;
+
     font-size: 3rem;
+
+    color: var(--nde-white);
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
     line-height: 1.3;
-    color: var(--nde-gold-bright);
-    margin-bottom: 20px;
+
 }
 
+
+/* HERO PARAGRAPHS */
+
+.hero p,
+.about-hero p,
+.mission-hero p,
+.contact-hero p,
+.donate-hero p,
+.rv-hero p,
 .concepts-hero p {
+
     max-width: 900px;
-    margin: 0 auto;
+
+    margin: 1rem auto 0;
+
     color: var(--nde-silver);
-    font-size: 1.05rem;
+
+    font-size: 1.2rem;
+
 }
 
 
-/* CONCEPT CARDS */
+/*============================================================
+   STANDARD CONTENT PANELS
+   SHARED ACROSS THE WEBSITE
+============================================================*/
 
-.concept-section {
+.intro,
+.about-content,
+.mission-content,
+.programs-content,
+.rv-content,
+.contact-content,
+.donate-content {
+
     width: calc(100% - 40px);
-    max-width: 1000px;
-    margin: 40px auto;
+
+    max-width: 1200px;
+
+    margin: 3rem auto;
+
+    padding: 2.5rem;
 
     background: var(--nde-card-bg);
 
     border: 2px solid var(--nde-gold);
-    border-radius: 16px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,0.15),
+        0 0 25px rgba(0,166,81,0.10);
+
+}
+
+
+/* PANEL HEADINGS */
+
+.intro h2,
+.intro h3,
+.about-content h2,
+.mission-content h2,
+.program-block h2,
+.rv-content h2,
+.contact-content h2,
+.donate-content h2 {
+
+    color: var(--nde-gold-bright);
+
+    text-transform: uppercase;
+
+}
+
+
+/* PANEL PARAGRAPHS */
+
+.about-content p,
+.mission-content p,
+.program-block p,
+.rv-content p,
+.contact-content p,
+.donate-content p,
+.intro p {
+
+    color: var(--nde-white);
+
+}
+
+
+/*============================================================
+   PROGRAM BLOCKS
+============================================================*/
+
+.program-block {
+
+    padding: 2rem;
+
+    margin-bottom: 2rem;
+
+    background: #111;
+
+    border: 2px solid var(--nde-gold);
+
+    border-radius: 15px;
+
+}
+
+
+/* TAEKWONDO */
+
+.program-block.taekwondo {
+
+    background: linear-gradient(
+        135deg,
+        #7a0000,
+        #0b2675
+    );
+
+}
+
+
+/* WELLNESS */
+
+.program-block.wellness {
+
+    background: linear-gradient(
+        135deg,
+        #111111,
+        #00361f
+    );
+
+}
+
+
+/* LAND AND CONSERVATION */
+
+.program-block.land {
+
+    background: linear-gradient(
+        135deg,
+        #141414,
+        #00643a
+    );
+
+}
+
+
+/*============================================================
+   CONCEPTS PAGE
+============================================================*/
+
+.concept-section {
+
+    width: calc(100% - 40px);
+
+    max-width: 1200px;
+
+    margin: 3rem auto;
+
+    background: var(--nde-card-bg);
+
+    border: 2px solid var(--nde-gold);
+
+    border-radius: 20px;
+
     overflow: hidden;
 
     box-shadow:
-        0 0 20px rgba(212,175,55,0.15);
+        0 0 15px rgba(212,175,55,0.15),
+        0 0 25px rgba(0,166,81,0.10);
+
 }
 
 
-/* CLICKABLE IMAGE BUTTON */
+/*============================================================
+   CONCEPT IMAGE BUTTON
+============================================================*/
 
 .concept-image-button {
+
     display: block;
+
     width: fit-content;
+
     max-width: 100%;
+
     margin: 25px auto 0;
+
     padding: 0 15px;
 
-    border: none;
     background: transparent;
+
+    border: none;
+
     color: inherit;
+
     font-family: inherit;
 
     cursor: zoom-in;
+
 }
 
 
-/* SMALL IMAGE PREVIEW */
+/*============================================================
+   SMALL CONCEPT IMAGE PREVIEWS
+============================================================*/
 
 .concept-image {
+
     display: block;
 
     width: 100%;
+
     max-width: 350px;
+
     height: auto;
 
     margin: 0 auto;
 
     border: 2px solid var(--nde-gold);
+
     border-radius: 10px;
 
     cursor: zoom-in;
@@ -209,80 +539,116 @@ button:focus-visible {
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+
 }
 
+
+/* IMAGE HOVER */
+
 .concept-image-button:hover .concept-image {
+
     transform: scale(1.03);
 
     box-shadow:
         0 0 18px rgba(212,175,55,0.4);
+
 }
 
 
 /* CLICK INSTRUCTION */
 
 .image-instruction {
+
     display: block;
+
     margin-top: 10px;
+
     text-align: center;
+
     color: var(--nde-gold-bright);
+
     font-size: 0.9rem;
+
 }
 
 
-/* CONCEPT CONTENT */
+/*============================================================
+   CONCEPT DESCRIPTIONS
+============================================================*/
 
 .concept-content {
-    padding: 25px 40px 35px;
+
+    padding: 2rem;
+
 }
 
 .concept-content h2 {
+
     color: var(--nde-gold-bright);
-    font-size: 1.9rem;
+
+    margin-top: 0;
+
     line-height: 1.3;
-    margin-bottom: 18px;
+
+    text-transform: uppercase;
+
 }
 
 .concept-content p {
-    color: var(--nde-silver);
-    font-size: 1.05rem;
-    margin-bottom: 20px;
+
+    color: var(--nde-white);
+
 }
 
 .concept-content ul {
-    list-style: disc;
-    padding-left: 28px;
+
+    color: var(--nde-silver);
+
+    padding-left: 20px;
+
 }
 
 .concept-content li {
-    padding: 5px 0;
-    color: var(--nde-white);
+
+    margin-bottom: 10px;
+
 }
 
 .concept-content li::marker {
-    color: var(--nde-green-bright);
+
+    color: var(--nde-gold);
+
 }
 
 
-/* FULL-SCREEN IMAGE VIEWER */
+/*============================================================
+   IMAGE ENLARGEMENT VIEWER
+============================================================*/
 
 .image-modal {
+
     position: fixed;
+
     inset: 0;
 
     width: 100%;
     height: 100%;
+
     max-width: none;
     max-height: none;
 
     margin: 0;
+
     padding: 16px;
 
     border: none;
+
     background: rgba(0,0,0,0.94);
+
     color: var(--nde-white);
 
     overflow: auto;
+
 }
 
 .image-modal:not([open]) {
@@ -290,35 +656,51 @@ button:focus-visible {
 }
 
 .image-modal[open] {
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
 }
 
 .image-modal::backdrop {
+
     background: rgba(0,0,0,0.94);
+
 }
 
 
-/* VIEWER CONTAINER */
+/*============================================================
+   IMAGE VIEWER CONTAINER
+============================================================*/
 
 .modal-container {
+
     position: relative;
+
     display: flex;
-    align-items: center;
+
     justify-content: center;
+    align-items: center;
 
     width: fit-content;
+
     max-width: 100%;
+
     max-height: 100%;
 
     margin: auto;
+
 }
 
 
-/* ENLARGED IMAGE */
+/*============================================================
+   ENLARGED IMAGE
+============================================================*/
 
 .modal-image {
+
     display: block;
 
     width: auto;
@@ -330,129 +712,302 @@ button:focus-visible {
     object-fit: contain;
 
     border: 3px solid var(--nde-gold);
+
     border-radius: 8px;
 
     box-shadow:
         0 0 30px rgba(212,175,55,0.25);
+
 }
 
 
-/* CLOSE BUTTON */
+/*============================================================
+   CLOSE IMAGE BUTTON
+============================================================*/
 
 .modal-close {
+
     position: absolute;
+
     top: 8px;
     right: 8px;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     width: 44px;
     height: 44px;
 
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.90);
+
     color: var(--nde-gold-bright);
 
     border: 2px solid var(--nde-gold);
+
     border-radius: 50%;
 
     font-size: 30px;
+
     line-height: 1;
 
     cursor: pointer;
+
     z-index: 10;
+
 }
 
 .modal-close:hover {
+
     background: var(--nde-gold);
+
     color: var(--nde-black);
+
 }
 
 
-/* FOOTER */
+/*============================================================
+   BUTTONS
+============================================================*/
+
+.button,
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    background: var(--gold-gradient);
+
+    color: #000;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.button:hover,
+.btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(245,209,66,0.5);
+
+}
+
+
+/*============================================================
+   SECTION DIVIDERS
+============================================================*/
+
+.section-divider {
+
+    width: 220px;
+
+    max-width: 80%;
+
+    height: 4px;
+
+    margin: 2rem auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--nde-green),
+        var(--nde-gold),
+        var(--nde-green),
+        transparent
+    );
+
+}
+
+
+/*============================================================
+   FOOTER
+============================================================*/
 
 .footer {
+
     background: #000;
-    border-top: 2px solid var(--nde-gold);
+
+    color: var(--nde-white);
+
     text-align: center;
-    padding: 30px 20px;
-    color: var(--nde-silver);
-    font-size: 0.9rem;
+
+    padding: 2rem;
+
+    border-top: 3px solid var(--nde-gold);
+
+}
+
+.footer a {
+
+    color: var(--nde-green-bright);
+
 }
 
 
-/* TABLETS */
+/*============================================================
+   TABLET RESPONSIVENESS
+============================================================*/
 
 @media (max-width: 900px) {
 
     .brand-text {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .brand-logo {
-        height: 70px;
+        height: 60px;
     }
 
     .main-nav ul {
-        gap: 18px;
+        gap: 1.2rem;
     }
 
+    .hero h1,
+    .hero h2,
+    .about-hero h1,
+    .mission-hero h1,
+    .contact-hero h1,
+    .donate-hero h1,
+    .rv-hero h1,
     .concepts-hero h1 {
         font-size: 2.3rem;
     }
 
-    .concept-content {
-        padding: 25px 30px;
+    .intro,
+    .about-content,
+    .mission-content,
+    .programs-content,
+    .rv-content,
+    .contact-content,
+    .donate-content,
+    .concept-section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
+
 }
 
 
-/* MOBILE PHONES */
+/*============================================================
+   MOBILE RESPONSIVENESS
+============================================================*/
 
 @media (max-width: 600px) {
 
+    body {
+        background-attachment: scroll;
+    }
+
+    /* HEADER */
+
     .brand-banner {
-        padding: 18px 10px;
+        padding: 1.2rem 0.7rem;
     }
 
     .brand-logo-text {
         gap: 10px;
     }
 
-    .brand-text {
-        font-size: 1.4rem;
-    }
-
     .brand-logo {
         height: 55px;
     }
 
+    .brand-text {
+        font-size: 1.4rem;
+    }
+
+    /* NAVIGATION */
+
+    .main-nav {
+        padding: 0.8rem;
+    }
+
     .main-nav ul {
-        gap: 12px;
-        padding: 12px;
+        gap: 0.8rem;
     }
 
     .main-nav a {
         font-size: 0.8rem;
+        letter-spacing: 0.5px;
     }
 
+    /* HERO */
+
+    .hero,
+    .about-hero,
+    .mission-hero,
+    .contact-hero,
+    .donate-hero,
+    .rv-hero,
     .concepts-hero {
-        padding: 40px 18px;
+        padding: 3rem 1.2rem;
     }
 
+    .hero h1,
+    .hero h2,
+    .about-hero h1,
+    .mission-hero h1,
+    .contact-hero h1,
+    .donate-hero h1,
+    .rv-hero h1,
     .concepts-hero h1 {
         font-size: 1.9rem;
+        letter-spacing: 1px;
     }
 
+    .hero p,
+    .about-hero p,
+    .mission-hero p,
+    .contact-hero p,
+    .donate-hero p,
+    .rv-hero p,
     .concepts-hero p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
+
+    /* CONTENT PANELS */
+
+    .intro,
+    .about-content,
+    .mission-content,
+    .programs-content,
+    .rv-content,
+    .contact-content,
+    .donate-content,
+    .concept-section {
+
+        width: calc(100% - 24px);
+
+        margin: 1.5rem auto;
+
+        padding: 1.2rem;
+
+        border-radius: 12px;
+
+    }
+
+    /* PROGRAM BLOCKS */
+
+    .program-block {
+        padding: 1.2rem;
+    }
+
+    /* CONCEPT CARDS */
 
     .concept-section {
-        width: calc(100% - 24px);
-        margin: 25px auto;
-        border-radius: 12px;
+        padding: 0;
     }
 
     .concept-image-button {
@@ -465,16 +1020,14 @@ button:focus-visible {
     }
 
     .concept-content {
-        padding: 20px;
+        padding: 1.3rem;
     }
 
     .concept-content h2 {
-        font-size: 1.45rem;
+        font-size: 1.4rem;
     }
 
-    .concept-content p {
-        font-size: 0.98rem;
-    }
+    /* IMAGE VIEWER */
 
     .image-modal {
         padding: 8px;
@@ -490,10 +1043,19 @@ button:focus-visible {
         height: 40px;
         font-size: 28px;
     }
+
+    /* FOOTER */
+
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
 }
 
 
-/* REDUCED MOTION */
+/*============================================================
+   ACCESSIBILITY - REDUCED MOTION
+============================================================*/
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -507,4 +1069,5 @@ button:focus-visible {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
+
 }
