@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nde-collective.org/sitemap.xml
