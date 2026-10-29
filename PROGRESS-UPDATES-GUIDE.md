@@ -2,31 +2,40 @@
 
 This guide is for the NDE Sovereign Life Collective team. The public page is `updates.html`, visible at https://nde-collective.org/updates.html.
 
-## How to publish a new update from your laptop
+## How to publish a dated milestone from your laptop
 
 1. Sign in to GitHub and open `hawkepuk/nde-sovereign-life-collective`.
 2. Open `updates.html` and select the pencil **Edit** control.
-3. Find the comment marked **EDITING GUIDE** near the end of the main content, or search for `ORGANIZATIONAL NEWS`.
-4. Find the first `<div class="three-up">` after `ORGANIZATIONAL NEWS`. Add a new `<article class="feature-card">` at the top of this grid, before the earlier entries.
-5. Change the date, category, headline, paragraph, and destination link. Use the event date, not the date you happen to update the site. The `datetime` attribute must be `YYYY-MM-DD`.
-6. Use **Commit changes** with a meaningful message, such as "Post October community partnership update".
-7. If the new announcement changes the featured update on the homepage, edit `index.html`: find `LATEST FROM NSLC` and update its date and summary to reflect your new post.
-8. Open the public Progress page after deployment and check its appearance and links on a laptop and phone.
+3. Search for `<ol class="milestone-timeline">` inside the **OUR HISTORY** section.
+4. Insert a new `<li class="milestone-item">` in chronological order, oldest first. Use the actual date of the accomplishment rather than the day you edit the site.
+5. If the exact day is not confirmed, put the achievement in the undated news section until you have a documented date; don't invent a date.
+6. Commit changes with a specific message, such as "Record November community milestone", and verify the live site after deployment.
+7. Update the homepage's latest news summary when a new accomplishment deserves particular attention.
 
-## Copyable HTML entry
+## Copyable milestone HTML
 
 ```html
-<article class="feature-card">
-  <span class="card-index">
-    <time datetime="2026-11-05">NOVEMBER 5, 2026</time> · COMMUNITY
-  </span>
-  <h3>Brief factual headline</h3>
-  <p>Explain exactly what happened, who was involved (with permission), why it matters to the mission, and the next step. Do not overstate the result.</p>
-  <a class="text-link" href="contact.html">Learn more ↗</a>
-</article>
+<li class="milestone-item">
+  <div class="milestone-date"><time datetime="2026-11-05">November 5, 2026</time></div>
+  <article class="milestone-panel">
+    <span class="eyebrow">COMMUNITY</span>
+    <h3>Brief factual headline</h3>
+    <p>Explain what actually happened, why it matters and any next steps.</p>
+    <a class="text-link" href="contact.html">Learn more ↗</a>
+  </article>
+</li>
 ```
 
-**The date, headline and description above are examples only. Do not publish them as a real event without replacing all placeholder content.**
+**The entry above is a template, not a real accomplishment; replace every example value before publishing.**
+
+## Confirmed dates supplied by NSLC leadership
+
+- August 4, 2026 — NDE Sovereign Life Collective established.
+- September 11, 2026 — 501(c)(3) tax-exempt recognition received.
+- October 2, 2026 — Business license obtained.
+- October 28, 2026 — Public website leadership and progress sections were added.
+
+Use appropriate primary documentation (formation documents, IRS determination letter and business license) when preparing grant applications. **A business license does not by itself authorize land development or RV park operations.**
 
 ## Examples of milestones worth documenting
 
