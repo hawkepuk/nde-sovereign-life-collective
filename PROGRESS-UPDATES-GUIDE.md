@@ -31,11 +31,12 @@ This guide is for the NDE Sovereign Life Collective team. The public page is `up
 ## Confirmed dates supplied by NSLC leadership
 
 - August 4, 2026 — NDE Sovereign Life Collective established.
+- August 17, 2026 — Charitable organization status attained (verify exact registration/recognition terminology from the organization’s official record).
 - September 11, 2026 — 501(c)(3) tax-exempt recognition received.
 - October 2, 2026 — Business license obtained.
 - October 28, 2026 — Public website leadership and progress sections were added.
 
-Use appropriate primary documentation (formation documents, IRS determination letter and business license) when preparing grant applications. **A business license does not by itself authorize land development or RV park operations.**
+Use appropriate primary documentation (formation documents, charitable organization registration or recognition document, IRS determination letter and business license) when preparing grant applications. **A business license does not by itself authorize land development or RV park operations.**
 
 ## Examples of milestones worth documenting
 
