@@ -31,7 +31,7 @@ This guide is for the NDE Sovereign Life Collective team. The public page is `up
 ## Confirmed dates supplied by NSLC leadership
 
 - August 4, 2026 — NDE Sovereign Life Collective established.
-- August 17, 2026 — Charitable organization status attained (verify exact registration/recognition terminology from the organization’s official record).
+- August 17, 2026 — **Washington Secretary of State Charitable Organization Registration successfully filed**, Registration No. **2013537**, confirmed by an official letter dated August 17. This is a Washington filing, not proof of federal tax exemption or the present renewal status.
 - September 11, 2026 — 501(c)(3) tax-exempt recognition received.
 - October 2, 2026 — Business license obtained.
 - October 28, 2026 — Public website leadership and progress sections were added.
@@ -72,4 +72,4 @@ Google's website policy: https://support.google.com/nonprofits/answer/1657899
 - Clear distinction between existing programs and proposed facilities.
 - A checked, published site before requesting another Ad Grants review.
 
-**Still to verify manually:** live DNS / HTTPS redirect, mobile loading and speed, correct organization on Zeffy and GoFundMe checkout, and whether NSLC wishes to publish its EIN, charity registration or public annual report. Do not invent an EIN or public financial data.
+**Already published:** EIN 42-4286493 and Washington Charitable Organization Registration No. 2013537, as supplied by leadership and the uploaded filing letter. **Still to verify manually:** live DNS / HTTPS redirect, mobile speed, correct organization and solicitation disclosures on Zeffy and GoFundMe checkout, city of the principal place of business for Washington fundraising disclosures, current charity-registration status and renewal date, and whether an annual report may be shared. Do not invent financial data or imply registration constitutes state endorsement.
