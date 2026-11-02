@@ -1,7 +1,7 @@
 /* NSLC floating music player. Native HTML5 audio; no tracking or external dependencies. */
 (() => {
   "use strict";
-  const src = "/assets/audio/our-land-our-voices-our-future.mp3";
+  const src = "/assets/audio/Our%20Land%2C%20Our%20Voices%2C%20Our%20Future.mp3";
   const title = "Our Land, Our Voices, Our Future";
   const wrap = document.createElement("aside");
   wrap.className = "nslc-audio-player";
