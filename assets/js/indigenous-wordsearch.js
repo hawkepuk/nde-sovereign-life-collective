@@ -128,7 +128,7 @@
   }
   function showGrid() {
     const grid=document.querySelector("[data-wordsearch-grid]");
-    if (!grid) return;
+    if (!grid || grid.children.length) return;
     for (const row of rows) {
       const line=document.createElement("div");
       line.className="wordsearch-line";
@@ -136,9 +136,10 @@
       grid.appendChild(line);
     }
   }
-  document.addEventListener("DOMContentLoaded",()=>{
+  const initialize = () => {
     showGrid();
-    document.querySelectorAll("[data-pdf-download]").forEach(btn=>{
+    document.querySelectorAll("[data-pdf-download]:not([data-nslc-bound])").forEach(btn=>{
+      btn.dataset.nslcBound = "true";
       btn.addEventListener("click",()=>{
         try { download(btn.dataset.pdfDownload==="answers"); }
         catch (err) {
@@ -147,6 +148,13 @@
         }
       });
     });
-    document.querySelectorAll("[data-print-worksheet]").forEach(btn=>btn.addEventListener("click",()=>window.print()));
-  });
+    document.querySelectorAll("[data-print-worksheet]:not([data-nslc-bound])").forEach(btn=>{
+      btn.dataset.nslcBound = "true";
+      btn.addEventListener("click",()=>window.print());
+    });
+  };
+  window.NSLCWordsearchLoaded = true;
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initialize);
+  else initialize();
+  document.addEventListener("nslc:pagechange", initialize);
 })();
