@@ -108,3 +108,9 @@ h1,h2,h3,h4,p,figure,blockquote{margin-top:0}h1,h2,h3,h4{font-weight:500}h1,h2,h
 @keyframes nslc-news-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:750px){.news-ticker-inner{gap:8px 14px;flex-wrap:wrap;padding-block:10px}.news-ticker-viewport{flex-basis:100%;order:3}.news-ticker-toggle{margin-left:auto}.news-ticker-heading{font-size:10px}.news-ticker-all{font-size:10px}.news-ticker-item{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.news-ticker.is-ready .news-ticker-track{animation:none!important;transform:none!important}.news-ticker-viewport,.news-ticker.is-ready .news-ticker-viewport{overflow-x:auto}}
+
+/* Homepage identity-first hero: the existing NSLC logo, not a future facility rendering. */
+.page-home .home-hero{background:#07130d;}
+.page-home .home-hero-photo{background-image:url('../images/NSLC Logo with Name.png');background-repeat:no-repeat;background-size:min(43vw,590px) auto;background-position:calc(100% - 6vw) center;opacity:.92;}
+.page-home .home-hero-shade{background:linear-gradient(90deg,rgba(5,14,10,.98) 0%,rgba(5,14,10,.95) 34%,rgba(5,14,10,.46) 66%,rgba(5,14,10,.15) 100%);}
+@media(max-width:750px){.page-home .home-hero-photo{background-position:52% 17%;background-size:min(76vw,360px) auto;opacity:.28}.page-home .home-hero-shade{background:linear-gradient(0deg,rgba(5,14,10,.96),rgba(5,14,10,.74));}}
