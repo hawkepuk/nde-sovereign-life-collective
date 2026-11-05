@@ -60,6 +60,10 @@ Use appropriate primary documentation (formation documents, charitable organizat
 
 ## Google Ad Grants preflight checklist
 
+**Lighthouse baseline from November 4, 2026 (user-provided PageSpeed results):** Mobile: Performance 74, Accessibility 94, Best Practices 100, SEO 100; Desktop: Performance 88, Accessibility 100, Best Practices 100, SEO 100. Mobile report flagged an unnamed button and LCP 43.7 seconds with approximately 10.5 MB of network payload. Remediation committed: add accessible navigation labels, postpone loading the ~7.4 MB anthem until Play, and preload the homepage hero image. **Run a fresh mobile and desktop test after deployment before treating the improvements as verified.**
+
+
+
 **Verified by NSLC leadership on November 4, 2026:** The website's outbound links to GoFundMe and Zeffy were tested and confirmed to open and function as intended. This is a link-functionality confirmation, not a verified test donation, payment settlement, or review of the platforms' charity disclosures.
 
 
