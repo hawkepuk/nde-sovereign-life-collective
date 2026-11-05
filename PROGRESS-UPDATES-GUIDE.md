@@ -7,7 +7,7 @@ This guide is for the NDE Sovereign Life Collective team. The public page is `up
 1. Sign in to GitHub and open `hawkepuk/nde-sovereign-life-collective`.
 2. Open `updates.html` and select the pencil **Edit** control.
 3. Search for `<ol class="milestone-timeline">` inside the **OUR HISTORY** section.
-4. Insert a new `<li class="milestone-item">` in chronological order, oldest first. Use the actual date of the accomplishment rather than the day you edit the site.
+4. Insert a new `<li class="milestone-item">` in reverse chronological order, **newest first**, so visitors see the latest confirmed update at the top. Use the actual date of the accomplishment rather than the day you edit the site.
 5. If the exact day is not confirmed, put the achievement in the undated news section until you have a documented date; don't invent a date.
 6. Commit changes with a specific message, such as "Record November community milestone", and verify the live site after deployment.
 7. Update the homepage's latest news summary when a new accomplishment deserves particular attention.
@@ -56,7 +56,7 @@ Use appropriate primary documentation (formation documents, charitable organizat
 - Label RV park drawings as concept art until construction is actually complete.
 - Include evidence or a public reference link when available.
 - Prefer original photos you have permission to publish.
-- Recheck the page's dates and links after each update. Keep historical updates visible so visitors can see continuity.
+- Recheck the page's dates and links after each update. Keep dated milestones in **newest-first order** and historical updates visible so visitors can see continuity.
 
 ## Google Ad Grants preflight checklist
 
