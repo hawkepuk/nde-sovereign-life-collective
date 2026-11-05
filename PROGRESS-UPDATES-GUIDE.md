@@ -60,6 +60,10 @@ Use appropriate primary documentation (formation documents, charitable organizat
 
 ## Google Ad Grants preflight checklist
 
+**Verified by NSLC leadership on November 4, 2026:** The website's outbound links to GoFundMe and Zeffy were tested and confirmed to open and function as intended. This is a link-functionality confirmation, not a verified test donation, payment settlement, or review of the platforms' charity disclosures.
+
+
+
 Google's website policy: https://support.google.com/nonprofits/answer/1657899
 
 - Clearly visible mission and nonprofit identity.
