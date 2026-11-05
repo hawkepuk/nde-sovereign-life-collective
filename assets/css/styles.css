@@ -113,4 +113,4 @@ h1,h2,h3,h4,p,figure,blockquote{margin-top:0}h1,h2,h3,h4{font-weight:500}h1,h2,h
 .page-home .home-hero{background:#07130d;}
 .page-home .home-hero-photo{background-image:url('../images/NSLC_Homepage_Brand_Artwork.webp');background-repeat:no-repeat;background-size:min(43vw,590px) auto;background-position:calc(100% - 6vw) center;opacity:.92;}
 .page-home .home-hero-shade{background:linear-gradient(90deg,rgba(5,14,10,.98) 0%,rgba(5,14,10,.95) 34%,rgba(5,14,10,.46) 66%,rgba(5,14,10,.15) 100%);}
-@media(max-width:750px){.page-home .home-hero-photo{background-position:52% 17%;background-size:min(76vw,360px) auto;opacity:.28}.page-home .home-hero-shade{background:linear-gradient(0deg,rgba(5,14,10,.96),rgba(5,14,10,.74));}}
+@media(max-width:750px){.page-home .home-hero-photo{background-position:center top;background-size:min(86vw,390px) auto;opacity:.88}.page-home .home-hero-shade{background:linear-gradient(180deg,rgba(5,14,10,.08) 0%,rgba(5,14,10,.22) 22%,rgba(5,14,10,.82) 46%,rgba(5,14,10,.96) 70%);}}
