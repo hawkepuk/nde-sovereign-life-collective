@@ -119,6 +119,10 @@
     if (typeof reducedMotion.addEventListener === 'function') {
       reducedMotion.addEventListener('change',configureMotion);
     }
+    // Start the ticker right away, using the built-in headlines.
+    // Mobile browsers can delay loading updates.html or serving cached files;
+    // the animation must never depend on that request finishing.
+    configureMotion();
     syncHomepageNews();
   }
 })();
