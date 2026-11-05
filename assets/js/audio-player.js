@@ -6,7 +6,9 @@
   const wrap = document.createElement("aside");
   wrap.className = "nslc-audio-player";
   wrap.setAttribute("aria-label", "NDE Sovereign Life Collective music player");
-  wrap.hidden = true;
+  // Keep the controls visible without forcing an audio download on page load.
+  // The song loads only when a visitor presses Play.
+  wrap.hidden = false;
   wrap.innerHTML =
     '<div class="nslc-audio-heading"><span class="nslc-audio-mark" aria-hidden="true">♫</span>' +
     '<div class="nslc-audio-info"><span class="nslc-audio-eyebrow">NSLC MUSIC</span><strong class="nslc-audio-title">Our Land, Our Voices, Our Future</strong></div>' +
@@ -17,11 +19,11 @@
     '<button type="button" class="nslc-audio-mute" aria-label="Mute audio" title="Mute audio">♪</button></div>' +
     '<p class="nslc-audio-error" role="status" hidden></p>';
   const audio = document.createElement("audio");
-  audio.preload = "metadata";
-  audio.src = src;
+  audio.preload = "none";
   audio.setAttribute("aria-label", title);
   wrap.appendChild(audio);
   document.body.appendChild(wrap);
+  document.body.classList.add("has-nslc-audio");
   const $ = selector => wrap.querySelector(selector);
   const play = $(".nslc-audio-play");
   const seek = $(".nslc-audio-seek");
@@ -60,6 +62,7 @@
   ["play", "pause", "ended", "timeupdate", "durationchange", "volumechange"].forEach(event => audio.addEventListener(event, refresh));
   play.addEventListener("click", async () => {
     if (!audio.paused) { audio.pause(); return; }
+    if (!audio.getAttribute("src")) audio.src = src;
     try { await audio.play(); error.hidden = true; }
     catch (_) { error.hidden = false; error.textContent = "Unable to play this recording. Please try again."; }
   });
