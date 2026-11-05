@@ -10,12 +10,12 @@ This guide is for the NDE Sovereign Life Collective team. The public page is `up
 4. Insert a new `<li class="milestone-item">` in reverse chronological order, **newest first**, so visitors see the latest confirmed update at the top. Use the actual date of the accomplishment rather than the day you edit the site.
 5. If the exact day is not confirmed, put the achievement in the undated news section until you have a documented date; don't invent a date.
 6. Commit changes with a specific message, such as "Record November community milestone", and verify the live site after deployment.
-7. Update the homepage's latest news summary when a new accomplishment deserves particular attention.
+7. The homepage news ticker and featured latest update automatically read the newest dated milestones from `updates.html`; no second homepage edit is normally needed. Verify both after publishing.
 
 ## Copyable milestone HTML
 
 ```html
-<li class="milestone-item">
+<li class="milestone-item" id="unique-milestone-slug">
   <div class="milestone-date"><time datetime="2026-11-05">November 5, 2026</time></div>
   <article class="milestone-panel">
     <span class="eyebrow">COMMUNITY</span>
@@ -26,7 +26,7 @@ This guide is for the NDE Sovereign Life Collective team. The public page is `up
 </li>
 ```
 
-**The entry above is a template, not a real accomplishment; replace every example value before publishing.**
+**The entry above is a template, not a real accomplishment; replace every example value before publishing.** Give each milestone a unique `id` so the homepage ticker can link directly to it.
 
 ## Confirmed dates supplied by NSLC leadership
 
