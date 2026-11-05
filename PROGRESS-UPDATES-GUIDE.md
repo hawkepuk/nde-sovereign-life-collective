@@ -60,6 +60,10 @@ Use appropriate primary documentation (formation documents, charitable organizat
 
 ## Google Ad Grants preflight checklist
 
+**November 4, 2026 retest (7:24 PM PST, results supplied by NSLC):** Mobile Performance **88**, Accessibility **100**, Best Practices **100**, SEO **100** (LCP **3.8 s**, payload approximately **3,194 KiB**). Desktop Performance **100**, Accessibility **100**, Best Practices **100**, SEO **100** (LCP **0.7 s**). The previous mobile accessibility warning is no longer reported; significant speed and payload improvements followed the audio preload and navigation accessibility changes. These are point-in-time Lighthouse lab measurements, not a guarantee of performance across visitors or of Ad Grants approval. Manual accessibility checks and confirmation that HTTP redirects to HTTPS are still recommended.
+
+
+
 **Lighthouse baseline from November 4, 2026 (user-provided PageSpeed results):** Mobile: Performance 74, Accessibility 94, Best Practices 100, SEO 100; Desktop: Performance 88, Accessibility 100, Best Practices 100, SEO 100. Mobile report flagged an unnamed button and LCP 43.7 seconds with approximately 10.5 MB of network payload. Remediation committed: add accessible navigation labels, postpone loading the ~7.4 MB anthem until Play, and preload the homepage hero image. **Run a fresh mobile and desktop test after deployment before treating the improvements as verified.**
 
 
