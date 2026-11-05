@@ -100,7 +100,11 @@ h1,h2,h3,h4,p,figure,blockquote{margin-top:0}h1,h2,h3,h4{font-weight:500}h1,h2,h
 .news-ticker-all{flex:none;color:#e7e0c8;font-size:11px;white-space:nowrap;text-underline-offset:4px}
 .news-ticker.is-ready .news-ticker-viewport{overflow:hidden}
 .news-ticker.is-ready .news-ticker-track{animation:nslc-news-marquee 48s linear infinite}
-.news-ticker.is-ready[data-paused="true"] .news-ticker-track,.news-ticker.is-ready:hover .news-ticker-track,.news-ticker.is-ready .news-ticker-viewport:focus-within .news-ticker-track{animation-play-state:paused}
+.news-ticker.is-ready[data-paused="true"] .news-ticker-track{animation-play-state:paused}
+/* Avoid sticky :hover states on touchscreens stopping the animation. */
+@media(hover:hover) and (pointer:fine){.news-ticker.is-ready:hover .news-ticker-track{animation-play-state:paused}}
+/* Pause for keyboard readers navigating a headline. */
+.news-ticker.is-ready .news-ticker-viewport:has(a:focus-visible) .news-ticker-track{animation-play-state:paused}
 @keyframes nslc-news-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:750px){.news-ticker-inner{gap:8px 14px;flex-wrap:wrap;padding-block:10px}.news-ticker-viewport{flex-basis:100%;order:3}.news-ticker-toggle{margin-left:auto}.news-ticker-heading{font-size:10px}.news-ticker-all{font-size:10px}.news-ticker-item{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.news-ticker.is-ready .news-ticker-track{animation:none!important;transform:none!important}.news-ticker-viewport,.news-ticker.is-ready .news-ticker-viewport{overflow-x:auto}}
