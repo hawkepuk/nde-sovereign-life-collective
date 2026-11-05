@@ -60,6 +60,10 @@ Use appropriate primary documentation (formation documents, charitable organizat
 
 ## Google Ad Grants preflight checklist
 
+**November 5, 2026 — repeated website-policy rejection follow-up:** Google Ad Grants sent another general website-policy rejection without identifying a specific page. The site was strengthened without fabricating results: the homepage now highlights accessible free educational resources and dated organizational progress before the future campus; Programs now separates work available now from future facilities; Resources includes an original family learning guide and research prompts; the Concepts gallery contains only facility design illustrations; explanatory captions have been removed from images while screen-reader descriptions and responsible project-status disclosures remain; the homepage visual now features NSLC's existing organizational identity artwork in place of the proposed park rendering. **Outstanding external verifications:** confirm HTTP redirects to HTTPS, verify indexing in Search Console, confirm any external donation destinations and request more specific Google review feedback. No Ad Grants approval is implied by these edits.
+
+
+
 **November 4, 2026 retest (7:24 PM PST, results supplied by NSLC):** Mobile Performance **88**, Accessibility **100**, Best Practices **100**, SEO **100** (LCP **3.8 s**, payload approximately **3,194 KiB**). Desktop Performance **100**, Accessibility **100**, Best Practices **100**, SEO **100** (LCP **0.7 s**). The previous mobile accessibility warning is no longer reported; significant speed and payload improvements followed the audio preload and navigation accessibility changes. These are point-in-time Lighthouse lab measurements, not a guarantee of performance across visitors or of Ad Grants approval. Manual accessibility checks and confirmation that HTTP redirects to HTTPS are still recommended.
 
 
