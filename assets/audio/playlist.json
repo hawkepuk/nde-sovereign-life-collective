@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "title": "The Land Knows Our Name",
+    "src": "/assets/The%20Land%20Knows%20Our%20Name.mp3"
+  },
+  {
+    "title": "The Land Knows Our Name Part 2",
+    "src": "/assets/The%20Land%20Knows%20Our%20Name%20Part%202.mp3"
+  },
+  {
+    "title": "The Land Still Remembers",
+    "src": "/assets/The%20Land%20Still%20Remembers.mp3"
+  },
+  {
+    "title": "My Soul Remembers You",
+    "src": "/assets/My%20Soul%20Remembers%20You.mp3"
+  }
+]
