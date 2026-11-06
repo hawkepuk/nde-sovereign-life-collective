@@ -73,7 +73,7 @@
     .then(response => { if (!response.ok) throw new Error("Playlist unavailable"); return response.json(); })
     .then(data => {
       if (!Array.isArray(data)) return;
-      const additions = data.filter(track => track && typeof track.title === "string" && typeof track.src === "string" && track.src.startsWith("/assets/audio/") && /\.(mp3|ogg|m4a|wav)(?:\?|$)/i.test(track.src));
+      const additions = data.filter(track => track && typeof track.title === "string" && typeof track.src === "string" && track.src.startsWith("/assets/") && !track.src.includes("..") && /\.(mp3|ogg|m4a|wav)(?:\?|$)/i.test(track.src));
       tracks = [defaultSong, ...additions.filter(track => track.src !== defaultSong.src)];
       populatePlaylist();
     }).catch(() => {});
