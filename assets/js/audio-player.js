@@ -2,7 +2,14 @@
 (() => {
   "use strict";
   const defaultSong = { title: "Our Land, Our Voices, Our Future", src: "/assets/audio/Our%20Land%2C%20Our%20Voices%2C%20Our%20Future.mp3" };
-  let tracks = [defaultSong];
+  // Keep the anthem first on every fresh page load; no extra playlist request required.
+  const tracks = [
+    defaultSong,
+    { title: "The Land Knows Our Name", src: "/assets/The%20Land%20Knows%20Our%20Name.mp3" },
+    { title: "The Land Knows Our Name Part 2", src: "/assets/The%20Land%20Knows%20Our%20Name%20Part%202.mp3" },
+    { title: "The Land Still Remembers", src: "/assets/The%20Land%20Still%20Remembers.mp3" },
+    { title: "My Soul Remembers You", src: "/assets/My%20Soul%20Remembers%20You.mp3" }
+  ];
   let trackIndex = 0;
   const title = defaultSong.title;
   const wrap = document.createElement("aside");
@@ -68,15 +75,7 @@
     const multiple = tracks.length > 1;
     prev.hidden = next.hidden = playlistRow.hidden = !multiple;
   };
-  // The first entry is always the anthem, even when the playlist expands.
-  fetch("/assets/audio/playlist.json", { cache: "no-cache" })
-    .then(response => { if (!response.ok) throw new Error("Playlist unavailable"); return response.json(); })
-    .then(data => {
-      if (!Array.isArray(data)) return;
-      const additions = data.filter(track => track && typeof track.title === "string" && typeof track.src === "string" && track.src.startsWith("/assets/") && !track.src.includes("..") && /\.(mp3|ogg|m4a|wav)(?:\?|$)/i.test(track.src));
-      tracks = [defaultSong, ...additions.filter(track => track.src !== defaultSong.src)];
-      populatePlaylist();
-    }).catch(() => {});
+  populatePlaylist();
 
   const seek = $(".nslc-audio-seek");
   const current = $(".nslc-audio-current");
