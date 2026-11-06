@@ -21,3 +21,9 @@ body.has-nslc-audio{padding-bottom:120px}
 .nslc-audio-player.is-compact .nslc-audio-controls,.nslc-audio-player.is-compact .nslc-audio-error{display:none}
 @media(max-width:650px){body.has-nslc-audio{padding-bottom:135px}.nslc-audio-player{right:10px;bottom:10px;width:calc(100vw - 20px);border-radius:10px}.nslc-audio-player.is-compact{width:min(300px,calc(100vw - 20px))}}
 @media print{.nslc-audio-player{display:none!important}body.has-nslc-audio{padding-bottom:0!important}}
+/* Playlist controls appear when additional recordings are available. */
+.nslc-audio-prev,.nslc-audio-next{border:0;cursor:pointer;color:#e8c57d;background:none;font-size:17px;flex-shrink:0;width:23px;height:32px}
+.nslc-audio-prev[hidden],.nslc-audio-next[hidden],.nslc-audio-playlist-row[hidden]{display:none!important}
+.nslc-audio-playlist-row{display:flex;align-items:center;gap:10px;margin-top:8px;color:#d5b773;font-size:10px}
+.nslc-audio-track-select{flex:1;min-width:0;background:#14291d;color:#f7f5ee;border:1px solid rgba(213,183,115,.55);border-radius:5px;padding:5px;font-size:11px}
+.nslc-audio-player.is-compact .nslc-audio-playlist-row{display:none}
