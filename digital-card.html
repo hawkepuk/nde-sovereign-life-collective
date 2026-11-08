@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09160f"><title>Digital Business Card | NDE Sovereign Life Collective</title>
+<meta name="description" content="Save NDE Sovereign Life Collective's digital business card, scan our website QR code, or add our nonprofit contact information to your phone.">
+<link rel="canonical" href="https://nde-collective.org/digital-card.html"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+*{box-sizing:border-box}body{background:radial-gradient(circle at 50% 0,#193b28,#07150e 70%);color:#f8f7ee;font-family:system-ui,Arial,sans-serif;margin:0}main{max-width:980px;margin:auto;padding:32px 18px 58px;text-align:center}
+h1{font-family:Georgia,serif;font-size:clamp(1.7rem,4vw,2.6rem);margin:5px 0}.eyebrow{color:#efca60;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+p{line-height:1.5}.sub{max-width:600px;margin:9px auto 27px;color:#d9e4dc}
+.frame{max-width:410px;margin:0 auto}.frame img{display:block;width:100%;height:auto;filter:drop-shadow(0 12px 28px #0009)}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:25px auto;max-width:760px}.actions a,.actions button{font:inherit;font-weight:700;display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;min-height:46px;text-decoration:none;color:#112012;background:#e4c16b;border:1px solid #e4c16b;border-radius:8px;cursor:pointer}.actions .secondary{background:#163825;color:#fff;border-color:#a9b99f}
+.details{max-width:570px;padding:22px;margin:22px auto 0;border:1px solid #816d34;border-radius:14px;background:#0c2015}.details h2{font-family:Georgia,serif;font-size:1.3rem;margin:0 0 12px}.details a{color:#f8da7f}.details p{margin:8px 0}
+footer{color:#d1d8d1;font-size:.83rem;margin-top:28px}a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:4px}
+</style></head><body><main>
+<div class="eyebrow">Indigenous-led 501(c)(3) nonprofit</div><h1>Nde Sovereign Life Collective</h1><p class="sub">Our digital business card: scan the QR code to visit our website, save the card image, or add NSLC to your phone contacts.</p>
+<div class="frame"><img src="assets/images/NSLC_Digital_Business_Card.svg" alt="Nde Sovereign Life Collective business card with a scannable QR code to nde-collective.org" width="750" height="1125"></div>
+<div class="actions">
+<a href="assets/images/NSLC_Digital_Business_Card.svg" download="NSLC_Digital_Business_Card.svg">Download Phone Card</a>
+<a href="NSLC_Contact.vcf" download="NSLC_Contact.vcf">Save to Contacts</a>
+<button class="secondary" type="button" id="share" hidden>Share Card</button>
+<a class="secondary" href="contact.html">Contact Us</a>
+</div>
+<section class="details"><h2>Contact NSLC</h2><p><a href="mailto:info@nde-collective.org">info@nde-collective.org</a></p><p><a href="tel:+15098628201">(509) 862-8201</a></p><p>P.O. Box 672, Colbert, WA 99005</p><p><a href="https://nde-collective.org">nde-collective.org</a></p></section>
+<footer>Healing Together: Mind, Body, Spirit, Community</footer>
+</main><script>
+const share=document.getElementById('share');
+if(navigator.share){share.hidden=false;share.addEventListener('click',()=>navigator.share({title:'Nde Sovereign Life Collective',text:'NSLC Digital Business Card',url:location.href}).catch(()=>{}));}
+</script></body></html>
