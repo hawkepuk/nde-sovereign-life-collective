@@ -125,4 +125,22 @@
     configureMotion();
     syncHomepageNews();
   }
+
+  // Reveal the printable flyer only when the corresponding image has been published.
+  const refreshFlyerDownload = () => {
+    const area = document.querySelector('[data-flyer-download-area]');
+    if (!area || area.dataset.flyerChecked === 'yes') return;
+    area.dataset.flyerChecked = 'yes';
+    const file = 'assets/images/NSLC_Mission_Flyer_Three_Verified_QR_Codes.png';
+    fetch(file, {method: 'HEAD', cache: 'no-store'})
+      .then(response => {
+        if (!response.ok || !(response.headers.get('content-type') || '').includes('image/')) return;
+        document.querySelectorAll('[data-flyer-download],[data-flyer-preview]').forEach(link => { link.hidden = false; });
+        const pending = document.querySelector('[data-flyer-pending]');
+        if (pending) pending.hidden = true;
+      })
+      .catch(() => {});
+  };
+  refreshFlyerDownload();
+  document.addEventListener('nslc:pagechange', refreshFlyerDownload);
 })();
