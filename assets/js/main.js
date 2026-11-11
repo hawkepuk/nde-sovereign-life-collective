@@ -131,7 +131,7 @@
     const area = document.querySelector('[data-flyer-download-area]');
     if (!area || area.dataset.flyerChecked === 'yes') return;
     area.dataset.flyerChecked = 'yes';
-    const file = 'assets/images/NSLC_Mission_Flyer_Three_Verified_QR_Codes.png';
+    const file = 'assets/images/NSLC_Mission_Flyer.png';
     fetch(file, {method: 'HEAD', cache: 'no-store'})
       .then(response => {
         if (!response.ok || !(response.headers.get('content-type') || '').includes('image/')) return;
